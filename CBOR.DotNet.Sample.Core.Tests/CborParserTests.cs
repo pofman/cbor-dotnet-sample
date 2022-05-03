@@ -185,9 +185,14 @@ public class CborParserTests
 		result.FirstName.Should().Be("Juan");
 		result.LastName.Should().Be("Perez");
 
-		result.Friends.Should().HaveCount(3);
-		result.Friends.Should().OnlyContain(x => x.Id == 1 || x.Id == 2 || x.Id == 3);
-		result.HeightHistoryPerYear.Should().HaveCount(3);
-		result.HeightHistoryPerYear.Should().OnlyContain(x => x == 1.2 || x == 1.4 || x == 1.5);
+		result.Friends.Should()
+			.HaveCount(3)
+			.And
+			.OnlyContain(x => x.Id == 1 || x.Id == 2 || x.Id == 3);
+
+		result.HeightHistoryPerYear.Should()
+			.HaveCount(3)
+			.And
+			.OnlyContain(x => x == 1.2 || x == 1.4 || x == 1.5);
 	}
 }
