@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Formats.Cbor" Version="6.0.0" />
+  </ItemGroup>
+	<PropertyGroup Condition="'$(Configuration)'=='DEBUG'">
+      <ProduceReferenceAssemblyInOutDir>true</ProduceReferenceAssemblyInOutDir>
+    </PropertyGroup>
+</Project>
