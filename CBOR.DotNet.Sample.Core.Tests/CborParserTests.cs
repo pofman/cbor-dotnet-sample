@@ -1,3 +1,4 @@
+using System.IO;
 using CBOR.DotNet.Sample.Core.Tests.Entities;
 using FluentAssertions;
 using Xunit;
@@ -6,6 +7,23 @@ namespace CBOR.DotNet.Sample.Core.Tests;
 
 public class CborParserTests
 {
+	[Fact]
+	public async void CborParser_ParseEntityWithOneIntegerProperty_ShouldReturnValidByteArrayAsync()
+	{
+		// Arrange
+		var entity = new IntegerEntity { Id = 1 };
+		var stream = new MemoryStream();
+
+		// Act
+		await new CborParser().EncryptAsync(entity, stream);
+		var bytes = stream.ToArray();
+
+		// Assert
+		bytes.Should()
+			.HaveCount(1)
+			.And
+			.Contain(1);
+	}
 	[Fact]
 	public void CborParser_ParseEntityWithOneIntegerProperty_ShouldReturnValidByteArray()
 	{

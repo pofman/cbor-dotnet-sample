@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CBOR.DotNet.Sample.Core", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CBOR.DotNet.Sample.Core.Tests", "CBOR.DotNet.Sample.Core.Tests\CBOR.DotNet.Sample.Core.Tests.csproj", "{C03AC3B3-0877-4665-8B31-07EB8AB875FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CBOR.DotNet.Sample.Support", "CBOR.DotNet.Sample.Support\CBOR.DotNet.Sample.Support.csproj", "{6723A603-B480-452F-A281-13D0A4A3A68A}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,9 +30,5 @@ Global
 		{C03AC3B3-0877-4665-8B31-07EB8AB875FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C03AC3B3-0877-4665-8B31-07EB8AB875FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C03AC3B3-0877-4665-8B31-07EB8AB875FA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6723A603-B480-452F-A281-13D0A4A3A68A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6723A603-B480-452F-A281-13D0A4A3A68A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6723A603-B480-452F-A281-13D0A4A3A68A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6723A603-B480-452F-A281-13D0A4A3A68A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

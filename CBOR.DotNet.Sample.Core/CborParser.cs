@@ -1,14 +1,12 @@
 using System.Formats.Cbor;
-using CBOR.DotNet.Sample.Support;
 
 namespace CBOR.DotNet.Sample.Core
 {
 	public class CborParser
 	{
-		public virtual Task EncryptAsync<T>(T obj, Stream stream, CancellationToken token = default)
+		public virtual ValueTask EncryptAsync<T>(T obj, Stream stream, CancellationToken token = default) where T : class
 		{
-			using ByteBufferWriter bufferWriter = new ByteBufferWriter();
-			return bufferWriter.CopyToAsync(stream, token);
+			return stream.WriteAsync(Encrypt<T>(obj), token);
 		}
 
 		public virtual byte[] Encrypt<T> (T obj) where T : class
