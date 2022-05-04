@@ -24,7 +24,7 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal --loger trx --results-directory ./TestResults
     - name: Test Report
-      uses: NasAmin/trx-parser@v0.1
+      uses: NasAmin/trx-parser@v0.2.0
       id: trx-parser
       if: success() || failure()
       with:
