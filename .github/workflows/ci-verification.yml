@@ -24,9 +24,10 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal --logger trx --results-directory ./TestResults
     - name: Test Report
-      uses: NasAmin/trx-parser@v0.2.0
+      uses: dorny/test-reporter@v1.5.0
       id: trx-parser
       if: success() || failure()
       with:
-        TRX_PATH: ${{ github.workspace }}/TestResults
-        REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        name: xUnit Tests 
+        path: ${{ github.workspace }}/TestResults
+        reporter: dotnet-trx
