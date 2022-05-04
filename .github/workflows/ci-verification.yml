@@ -22,12 +22,11 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
     - name: Test
-      run: dotnet test --no-build --verbosity normal --logger "trx;LogFileName=TestResults.trx"
+      run: dotnet test --no-build --verbosity normal --loger trx --results-directory ./TestResults
     - name: Test Report
-      uses: dorny/test-reporter@v1
+      uses: NasAmin/trx-parser@v0.1
+      id: trx-parser
       if: success() || failure()
       with:
-        name: xUnit Tests
-        path: '*.trx'
-        reporter: dotnet-trx
-        working-directory: ''
+        TRX_PATH: ${{ github.workspace }}/TestResults
+        REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
