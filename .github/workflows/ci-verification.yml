@@ -29,5 +29,5 @@ jobs:
       if: success() || failure()
       with:
         name: xUnit Tests 
-        path: ${{ github.workspace }}/TestResults
+        path: ${{ github.workspace }}/TestResults/*.trx
         reporter: dotnet-trx
