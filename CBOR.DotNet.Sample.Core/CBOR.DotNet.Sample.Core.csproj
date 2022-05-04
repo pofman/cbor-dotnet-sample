@@ -9,6 +9,10 @@
   <ItemGroup>
     <PackageReference Include="System.Formats.Cbor" Version="6.0.0" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CBOR.DotNet.Sample.Support\CBOR.DotNet.Sample.Support.csproj" />
+  </ItemGroup>
 	<PropertyGroup Condition="'$(Configuration)'=='DEBUG'">
       <ProduceReferenceAssemblyInOutDir>true</ProduceReferenceAssemblyInOutDir>
     </PropertyGroup>
