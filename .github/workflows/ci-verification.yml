@@ -28,5 +28,5 @@ jobs:
       if: success() || failure()
       with:
         name: xUnit Tests
-        path: CBOR.DotNet.Sample.Core.Tests/TestResults/TestResults.trx
+        path: /home/runner/work/cbor-dotnet-sample/cbor-dotnet-sample/CBOR.DotNet.Sample.Core.Tests/TestResults/TestResults.trx
         reporter: dotnet-trx
